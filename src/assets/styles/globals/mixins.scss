@@ -1,0 +1,152 @@
+	@import "functions.scss";
+
+/* =====================================================================
+	Responsive // Horizontal / Device Mixins
+	==================================================================== */
+
+	@mixin media-query($query) {
+		@media ($query) { @content; }
+	}
+
+	@mixin x-sm-mobile() {
+		@include media-query("max-width: #{$screen-x-sm-phone-max}") { @content; }
+	}
+
+	@mixin mobile() {
+		@include media-query("max-width: #{$screen-phone-max}") { @content; }
+	}
+
+	@mixin mobile-lg() {
+		@include media-query("max-width: #{$screen-desktop-min}") { @content; }
+	}
+
+	@mixin tablet-only() {
+		@include media-query("min-width: #{$screen-tablet-min}) and (max-width: #{$screen-desktop-min}") { @content; }
+	}
+
+	@mixin tablet-portrait() {
+		@include media-query("min-width: #{$screen-tablet-min}) and (max-width: #{$screen-portrait-max}") { @content; }
+	}
+
+	@mixin tablet() {
+		@include media-query("min-width: #{$screen-tablet-min}") { @content; }
+	}
+
+	@mixin desktop-sm() {
+		@media (max-height: #{$screen-sm-vertical-max}) and (min-width: #{$screen-desktop-min}) { @content; }
+	}
+
+	@mixin desktop() {
+		@include media-query("min-width: #{$screen-desktop-min}") { @content; }
+	}
+
+	@mixin desktop-lg() {
+		@include media-query("min-width: #{$screen-desktop-lg-min}") { @content; }
+	}
+
+	/* These rules are complicated and are meant for specific screen detections.
+		These rules are meant to only target handheld devices (e.g, no desktops),
+		that can be rotated, and detect them in certain orientations. Android devices
+		will update the orientation when opening the keyboard, and therefore need
+		the added aspect-ratio checks to safegaurd against that */
+
+	@mixin mobile-landscape() {
+		@media (max-height: #{$screen-phone-retina-max}) and (hover: none) and (min-aspect-ratio: 13/9) and (orientation: landscape) { @content; }
+	}
+
+	@mixin tablet-portrait() {
+		@media (max-width: #{$screen-portrait-retina-max}) and (min-width: #{$screen-tablet-min}) and (hover: none) and (min-aspect-ratio: 10/13) and (orientation: portrait)  { @content; }
+	}
+
+/* =====================================================================
+	Responsive // Vertical Mixins
+	==================================================================== */
+
+	@mixin x-sm-vertical-up() {
+		@media (min-height: #{$screen-x-sm-vertical-max}) and (max-width: #{$screen-phone-max}) { @content; }
+	}
+
+	@mixin sm-vertical() {
+		@include media-query("max-height: #{$screen-sm-vertical-max}") { @content; }
+	}
+
+	@mixin sm-vertical-up() {
+		@include media-query("min-height: #{$screen-sm-vertical-max}") { @content; }
+	}
+
+	@mixin lg-vertical() {
+		@include media-query("min-height: #{$screen-lg-vertical-max}") { @content; }
+	}
+
+/* =====================================================================
+	Positioning
+	==================================================================== */
+
+	@mixin cover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%; // webkit fix
+		height: 100%; // webkit fix
+	}
+
+	@mixin absolute {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+/* =====================================================================
+	Flex box
+	==================================================================== */
+
+	@mixin column-center {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@mixin row-center {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+/* =====================================================================
+	Resets
+	==================================================================== */
+
+	@mixin semantic-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+/* =====================================================================
+	Fonts
+	==================================================================== */
+
+	@mixin responsive-body-font-size($min: $body-font-size-min, $max: $body-font-size-max, $min-width: $screen-phone-max, $max-width: $screen-desktop-min) {
+		:root {
+			font-size: $body-font-size-min;
+
+			@media (min-width: $min-width) and (max-width: $max-width) {
+				font-size: calc(#{$min} + (#{strip-unit($max)} - #{strip-unit($min)}) * ((100vw - #{$min-width}) / (#{strip-unit($max-width)} - #{strip-unit($min-width)})));
+			}
+
+			@media (min-width: $max-width) {
+				font-size: $body-font-size-max;
+			}
+
+			@include mobile() {
+				font-size: 20px;
+			}
+		}
+	}

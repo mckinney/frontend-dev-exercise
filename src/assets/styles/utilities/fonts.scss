@@ -1,0 +1,20 @@
+/*
+* Add font groups to the $fonts map to automatically generate
+* @font-face declarations. Each entry in $fonts should itself be a map.
+* The main $fonts key should be the name of the font-family.  Each entry within
+* that map should be a Font Weight => Filename pair.
+*/
+
+// Tragic Marker
+@font-face {
+	font-family: 'tragic_markerregular';
+	src: url('~@/assets/fonts/tragicmarker-webfont.woff2') format('woff2'),
+				url('~@/assets/fonts/tragicmarker-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// Franklin Gothic Medium Condensed
+// font-family: 'ITC Franklin Gothic LT W05 MdC'
+@import url("https://fast.fonts.net/cssapi/7e682dda-fca5-42b2-9eb2-d04b2cb67722.css");

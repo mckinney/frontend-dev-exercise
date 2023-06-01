@@ -1,0 +1,122 @@
+/* =====================================================================
+	Colors
+	==================================================================== */
+
+	$primary-color      : #4fc08d;
+	$primary-color-light: lighten($primary-color, 15%);
+	$primary-color-dark : darken($primary-color, 15%);
+
+	$alt-color          : #000000;
+	$alt-color-light    : lighten($alt-color, 5%);
+	$alt-color-dark     : darken($alt-color, 5%);
+
+	$gray               : #999999;
+	$gray-light         : #e5e5e5;
+	$gray-dark          : #666666;
+
+	$light-primary			: #F9F5EB;
+
+	$dark-primary				: #2a2530;
+	$dark-secondary			: #373340;
+
+	$highlight-primary	: #EB565D;
+	$highlight-secondary: #44B3C1;
+
+	$main-1							: #FBB539;
+	$main-2							: #E8868B;
+	$main-3							: #5EC7F2;
+	$main-4							: #C1A2CD;
+
+	$main-light-4				: #D8C5E0;
+	$main-dark-4				: #B08AC0;
+
+/* =====================================================================
+	Layout
+	==================================================================== */
+
+	$z-bottom    : 100;
+	$z-bottom-mid: 200;
+	$z-mid       : 300;
+	$z-top-mid   : 400;
+	$z-top       : 500;
+
+	$z-modifier	 : 50;
+
+/* =====================================================================
+	Spacing
+	==================================================================== */
+
+	$section-margin-sm       : 1rem;
+	$section-margin-md       : 2rem;
+	$section-margin-lg       : 3rem;
+	$section-margin-lg-mobile: 1.6rem;
+
+/* =====================================================================
+	Fonts
+	==================================================================== */
+
+	$body-font-size-min: 14px;
+	$body-font-size-max: 22px;
+
+	$heading-font: 'tragic_markerregular';
+	$body-font   : 'ITC Franklin Gothic LT W05 MdC';
+
+	$font-size-xxs: rem(8);
+	$font-size-xs : rem(12);
+	$font-size-sm : rem(16);
+	$font-size-md : rem(20);
+	$font-size-lg : rem(24);
+	$font-size-xl : rem(28);
+	$font-size-xxl: rem(32);
+	$font-size-xxxl: rem(36);
+
+	$heading-size-sm: 35px;
+	$heading-size-md: 45px;
+	$heading-size-lg: 65px;
+	$heading-size-xl: 90px;
+	$heading-size-xxl: 150px;
+
+	$letter-spacing-base: .02em;
+	$letter-spacing-plus: .04em;
+
+	$font-weight-light  : 300;
+	$font-weight-regular: 500;
+	$font-weight-bold   : 700;
+
+/* =====================================================================
+	Transitions
+	==================================================================== */
+
+	$ui-transition-duration-short: .1s;
+	$ui-transition-duration      : .3s;
+	$ui-transition-duration-long : .6s;
+
+/* ==========================================================================
+	Media Break points
+	========================================================================= */
+
+	$screen-x-sm-phone-max     : 320px;
+	$screen-phone-retina-max   : 415px;
+	$screen-phone-max          : 677px;
+	$screen-tablet-min         : ($screen-phone-max + 1);
+	$screen-portrait-max       : 900px;
+	$screen-portrait-retina-max: 1024px;
+	$screen-tablet-max         : 768px;
+	$screen-desktop-min        : 1130px;
+	$screen-desktop-lg-min     : 1400px;
+
+	$screen-desktop-height-min: 620px;
+
+	$screen-x-sm-vertical-max: 745px;
+	$screen-sm-vertical-max  : 900px;
+	$screen-lg-vertical-max  : 1000px;
+
+/* ==========================================================================
+	UI Elements
+	========================================================================= */
+
+	$goal-space-height-mobile			: 125px;
+	$goal-space-height-tablet			: 175px;
+
+	$progress-tracker-height-mobile: 90px;
+	$progress-tracker-height-tablet: 110px;

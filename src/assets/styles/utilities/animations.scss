@@ -1,0 +1,92 @@
+/*
+* File for including animation keyframes. Helps keep them reusable by
+* different components, and prevents long keyframe declarations from
+* cluttering component files.  https://github.com/daneden/animate.css
+* Useful repo for grabbing individual premade animations.
+*/
+
+@keyframes grow {
+	from { transform: scale(0); }
+	to { transform: scale(1); } 
+}
+
+@keyframes bloom {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.15); }
+	100% { transform: scale(1); }
+}
+
+@keyframes vibrate {
+	0% { transform: rotate(0); }
+	0.50%, 10%, 20%, 30%, 40%, 50% { transform: rotate(.4deg); }
+  5%, 15%, 25%, 35%, 45% { transform: rotate(-.4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake {
+	0% { transform: translateX(0); }
+	0.50%, 10%, 20%, 30%, 40%, 50% { transform: translateX(3px); }
+  5%, 15%, 25%, 35%, 45% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes strikethrough {
+	from { width: 0%; }
+	to { width: 100%; }
+}
+
+@keyframes pulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.02) rotate(1deg) }
+	100% { transform: scale(1); }
+}
+
+
+@keyframes cardFlip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes unmatched {
+	to { background: $highlight-primary };
+}
+
+@keyframes blink {
+  50% { opacity: 1; }
+}
+
+@keyframes bulge {
+  50% { transform: scale(1.02); }
+}
+
+@keyframes x-spin {
+	0% { transform: rotateX(0deg); }
+	50% { transform: rotateX(180deg); }
+	100% { transform: rotateX(360deg); }
+}
+
+@keyframes disapper {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
