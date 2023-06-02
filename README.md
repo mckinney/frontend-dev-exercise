@@ -11,7 +11,7 @@ The ToDo List task pad is in need of some maintenance. _Almost_ all of the code 
     - Edit the `taskClick()` method in `src/components/game/Task.vue` to toggle the `completed` status when a task is clicked. **Note:** Deactivated tasks should not be "clickable". And clicking a completed task should change the task's status back to `not-completed`.  
     - Programmatically track the number of completed tasks at the top of the to-do list. E.g: "x of n tasks completed". **Note:** Deactivated tasks should not count towards the overall number (n) of tasks.
 2. Delete the pre-defined project (`src/components/ProjectList.vue`) and tasks (`src/components/Project.vue`) and configure the project-task heirarchy using the JSON data in `src/projects.json` and `src/tasks.json`.
-    - Each task in `src/tasks.json` is associated with a project in `src/tasks.json`.
+    - Each task in `src/tasks.json` is associated with a project in `src/projects.json`.
     - Programmatically track the number of completed projects at the top of the project tab. E.g: "x of n projects completed". 
     - A project should be considered complete when all of its associated tasks have a status of `completed`.  
 3. [ CSS task ]
