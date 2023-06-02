@@ -2,7 +2,6 @@
 	<div class="project-component">
 		<div class="project-name lined-paper">
 			<span>{{ project.name }}</span>
-			<CompletionPercentage :project="project" />
 		</div>
 		<ul class="semantic-list">
 			<li class="list-item" v-for="(task, index) in tasks" :key="index">
@@ -14,13 +13,11 @@
 </template>
 
 <script>
-import CompletionPercentage from "@/components/game/CompletionPercentage";
 import Task from "@/components/game/Task";
 
 export default {
 	name: 'Project',
 	components: {
-		CompletionPercentage,
 		Task,
 	},
 	props: {
@@ -29,11 +26,21 @@ export default {
 			required: true,
 		},
 	},
-	computed: {
-		tasks() {
-			const taskList = [];
-			return taskList.filter((task) => task.project === this.project.id);
-		},
+	data () {
+		return {
+			tasks: [
+				{
+					"title": "Create content for Bosco's Restaurant",
+					"status": "not-complete",
+					"project": 1
+				},
+				{
+					"title": "File for LLC",
+					"status": "complete",
+					"project": 1
+				},
+			]
+		}
 	},
 };
 </script>

@@ -1,31 +1,43 @@
 [
     {
         "title": "Create content for Bosco's Restaurant",
-        "status": "not-complete"
+        "status": "not-complete",
+        "project": 1
     },
     {
         "title": "File for LLC",
-        "status": "not-complete"
+        "status": "complete",
+        "project": 1
     },
     {
-        "title": "Ace the interview",
-        "status": "not-complete"
+        "title": "Ace the interview today",
+        "status": "not-complete",
+        "project": 3
     },
     {
-        "title": "Ace the interview",
-        "status": "not-complete"
+        "title": "Grocery shop",
+        "status": "not-complete",
+        "project": 3
     },
     {
         "title": "Eat a balanced breakfast",
-        "status": "complete"
+        "status": "complete",
+        "project": 3
     },
     {
-        "title": "Eat a balanced breakfast",
-        "status": "complete"
+        "title": "Hit the gym",
+        "status": "complete",
+        "project": 3
     },
     {
         "title": "Budget for vacation",
-        "status": "deactivated"
+        "status": "deactivated",
+        "project": 2
+    },
+    {
+        "title": "Research places to stay on vacation",
+        "status": "deactivated",
+        "project": 2
     }
 ]
   

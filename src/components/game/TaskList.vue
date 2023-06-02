@@ -19,7 +19,6 @@
 
 <script>
 import Task from "@/components/game/Task";
-import tasks from '@/tasks.json'
 export default {
 	name: 'TaskList',
 	components: {
@@ -29,14 +28,19 @@ export default {
 		return {
 			currentTask: 0,
 			totalTasks: 2,
-			// TODO: Populate tasks array from @/tasks.json
-			tasks: tasks
+			tasks: [
+				{
+					"title": "Create content for Bosco's Restaurant",
+					"status": "deactivated",
+					"project": 1
+				},
+				{
+					"title": "File for LLC",
+					"status": "complete",
+					"project": 1
+				}
+			]
 		}
-	},
-	computed: {
-		shuffledTasks() {
-			return this.active;
-		},
 	},
 };
 </script>

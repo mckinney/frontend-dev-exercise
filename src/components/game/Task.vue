@@ -1,11 +1,10 @@
 <template>
-	<div :class="['task-component', 'lined-paper', status]" @click="taskClick()">
-		<div :class="['title', status]">{{ task.title }}</div>
+	<div :class="['task-component', 'lined-paper']" @click="taskClick()">
+		<div :class="['title']">{{ task.title }}</div>
 	</div>
 </template>
 
 <script>
-import { capitalCamel } from "@/lib/string-transform";
 
 export default {
 	name: 'Task',
@@ -13,11 +12,6 @@ export default {
 		task: {
 			type: Object,
 			required: true,
-		},
-	},
-	computed: {
-		status() {
-			return 'not-complete'
 		},
 	},
 	methods: {

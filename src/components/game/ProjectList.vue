@@ -2,7 +2,10 @@
 	<div :class="['project-list-component', 'list-styles']">
 		<div class="project-list-header">
 			<h1 class="lined-paper">Projects</h1>
-			<div class="lined-space lined-paper"> - </div>
+			<div class="task-tracker lined-paper">
+				<span>{{ completedProjects }}</span> of <span>{{ totalProjects }}</span> projects completed
+			</div>
+			<div class="lined-space lined-paper show-desktop"> - </div>
 		</div>
 		<ul class="semantic-list">
 			<li class="list-item" v-for="(project, index) in projects" :key="index">
@@ -21,6 +24,18 @@ export default {
 	components: {
 		Project,
 	},
+	data () {
+		return {
+			completedProjects: 0,
+			totalProjects: 1,
+			projects: [
+				{
+					"name": "Monthly Business",
+					"id": 1
+				},
+			]
+		}
+	}
 };
 </script>
 
@@ -52,5 +67,13 @@ export default {
 				}
 			}
 		}
+	}
+
+	.task-tracker {
+		font-size: $font-size-xxl;
+
+		@include desktop { font-size: $font-size-lg; }
+
+		span { color: $highlight-primary; }
 	}
 </style>
