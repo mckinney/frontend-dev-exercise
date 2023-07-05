@@ -2,8 +2,6 @@
 	HTML
 	==================================================================== */
 
-	h1, h2, h3, h4, h5, h6 { margin: 0; }
-
 	ul, li {
 		margin: 0;
 		padding: 0;
@@ -204,40 +202,6 @@
 			background-image: url('~@/assets/images/paper-line-spaced.svg');
 			background-repeat: repeat;
 			min-height: 60px;
-		}
-	}
-
-	.pinned {
-		&:before,
-		&:after {
-			content: '';
-			position: absolute;
-			top: 20px;
-			margin: auto;
-			width: 75px;
-			height: 75px;
-			background-image: url('~@/assets/images/tack.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-
-			@include desktop {
-				top: -30px;
-				width: 100px;
-				height: 100px;
-			}
-		}
-
-		&:before {
-			left: 20px;
-
-			@include desktop { left: 50px; }
-		}
-
-		&:after {
-			right: 20px;
-
-			@include desktop { right: 50px; }
 		}
 	}
 

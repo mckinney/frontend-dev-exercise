@@ -1,16 +1,20 @@
 <template>
-  <Dashboard />
+	<AppScreen :scrollDefault="false">
+		<Dashboard />
+	</AppScreen>
 </template>
 
 <script>
-import Dashboard from './components/Dashboard.vue'
+import AppScreen from '@/components/partials/AppScreen';
+import Dashboard from '@/components/Dashboard';
 
 export default {
-  name: 'App',
-  components: {
-    Dashboard
-  }
-}
+	name: 'App',
+	components: {
+		AppScreen,
+		Dashboard,
+	},
+};
 </script>
 
 <style lang="scss">
@@ -22,11 +26,10 @@ export default {
 		font-family: $body-font;
 		font-size: 20px;
 		color: $dark-primary;
-		background: var(--main-color);
+		background: $main-1;
 
 		@include mobile {
 			font-size: 14px;
-			background: $dark-primary;
 		}
 	}
 

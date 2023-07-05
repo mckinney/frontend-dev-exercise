@@ -1,19 +1,15 @@
 <template>
-	<AppScreen :scrollDefault="false">
-		<div class="dashboard-component">
-			<Notebook />
-		</div>
-	</AppScreen>
+	<div class="dashboard-component">
+		<Notebook />
+	</div>
 </template>
 
 <script>
-import AppScreen from '@/components/partials/AppScreen';
 import Notebook from "@/components/game/Notebook";
 
 export default {
 	name: 'Dashboard',
 	components: {
-		AppScreen,
 		Notebook,
 	},
 };
@@ -34,7 +30,7 @@ export default {
 			justify-content: space-around;
 			align-items: center;
 			padding-top: 100px;
-			background-image: var(--dashboard-image);
+			background-image: url('~@/assets/images/backgrounds/desk-image-1.png');
 			background-repeat: no-repeat;
 			background-size: 450px;
 			background-position: 100px 0;

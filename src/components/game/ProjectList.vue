@@ -1,7 +1,7 @@
 <template>
 	<div :class="['project-list-component', 'list-styles']">
 		<div class="project-list-header">
-			<h1 class="lined-paper">Projects</h1>
+			<h1 class="lined-paper project-header">Projects</h1>
 			<div class="task-tracker lined-paper">
 				<span>{{ completedProjects }}</span> of <span>{{ totalProjects }}</span> projects completed
 			</div>
@@ -41,15 +41,12 @@ export default {
 
 <style lang="scss" scoped>
 	.project-list-header {
-		display: none;
-
+		position: relative;
+		font-family: $heading-font;
+		text-transform: uppercase;
+		text-align: center;
+		
 		@include desktop {
-			display: block;
-			position: relative;
-			font-family: $heading-font;
-			text-transform: uppercase;
-			text-align: center;
-
 			.lined-paper:first-child {
 				&:after {
 					content: '';
@@ -66,6 +63,13 @@ export default {
 					height: 100px;
 				}
 			}
+		}
+
+		.project-header {
+			display: none;
+			margin: 0;
+
+			@include desktop { display: block; }
 		}
 	}
 

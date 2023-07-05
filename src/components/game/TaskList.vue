@@ -19,6 +19,7 @@
 
 <script>
 import Task from "@/components/game/Task";
+
 export default {
 	name: 'TaskList',
 	components: {
@@ -31,13 +32,13 @@ export default {
 			tasks: [
 				{
 					"title": "Create content for Bosco's Restaurant",
-					"status": "deactivated",
-					"project": 1
+					"status": "active",
+					"projectId": 1,
 				},
 				{
 					"title": "File for LLC",
-					"status": "complete",
-					"project": 1
+					"status": "completed",
+					"projectId": 1,
 				}
 			]
 		}
@@ -73,6 +74,7 @@ export default {
 
 		.to-do-header {
 			display: none;
+			margin: 0;
 
 			@include desktop { display: block; }
 		}

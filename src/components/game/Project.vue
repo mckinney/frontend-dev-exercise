@@ -31,12 +31,12 @@ export default {
 			tasks: [
 				{
 					"title": "Create content for Bosco's Restaurant",
-					"status": "not-complete",
+					"status": "active",
 					"project": 1
 				},
 				{
 					"title": "File for LLC",
-					"status": "complete",
+					"status": "completed",
 					"project": 1
 				},
 			]
@@ -89,7 +89,5 @@ export default {
 		user-select: none;
 	}
 
-	.completion-percentage-component {
-		color: $highlight-secondary;
-	}
+	.completion-percentage-component { color: $highlight-secondary; }
 </style>

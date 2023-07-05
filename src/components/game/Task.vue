@@ -16,7 +16,7 @@ export default {
 	},
 	methods: {
 		taskClick() {
-			alert('task clicked!')
+			alert('task clicked!');
 		}
 	},
 };
@@ -33,30 +33,22 @@ export default {
 			white-space: nowrap;
 			overflow: visible;
 			text-overflow: ellipsis;
-
-			&:hover { letter-spacing: .05em; }
 		}
 	}
 
 	.inactive,
-	.complete,
-	.deactivated { pointer-events: none; }
+	.completed { pointer-events: none; }
 
 	.title {
 		&.inactive {
 			opacity: 0.5;
 		}
 
-		&.complete {
+		&.completed {
 			text-decoration: line-through;
 			background: $highlight-primary;
 
 			.project-task & { background: $highlight-secondary; }
-		}
-
-		&.deactivated {
-			opacity: 0.5;
-			text-decoration: line-through;
 		}
 	}
 </style>

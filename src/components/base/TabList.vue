@@ -32,9 +32,7 @@ export default {
 	},
 	methods: {
 		selectTab(tab) {
-			if (tab !== this.activeTab) {
-				this.activeTab = tab;
-			}
+			// code goes here
 		},
 	},
 };
