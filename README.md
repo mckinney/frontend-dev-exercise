@@ -1,6 +1,6 @@
 # Frontend Excercise
 
-The following exercise is an excerpt from a game we developed for a client, and a good example of a project we might work on as a team.
+Th following exercise is an excerpt from a game we developed for a client, and a good example of a project we might work on as a team.
 
 
 ## Submission Instructions
