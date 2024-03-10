@@ -5,7 +5,7 @@ The following exercise is an excerpt from a game we developed for a client, and 
 
 ## Submission Instructions
 
-Clone this repository and push your code changes to your personal Github account. When finished, please share the link to your public repository with Brie Floyd at **brie.floyd@cylndr.com** so that we may have a chance to review.
+Fork this repository to your own github account and make changes on your fork. When finished, please make a pull request into the mckinney/frontend-dev-exercise repository and share the link to your pull request with Brie Floyd at **brie.floyd@cylndr.com** so that we may have a chance to review.
 
 
 ## Items
